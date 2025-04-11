@@ -629,10 +629,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.3 \
     vendor.qti.memory.pasrmanager@1.0 \
     vendor.qti.memory.pasrmanager@1.1 \
-    audio.primary.lito \
     sound_trigger.primary.lito \
     libFileMux_proprietary \
-    liba2dpoffload \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
@@ -656,7 +654,6 @@ PRODUCT_PACKAGES += \
     libmmrtpencoder_proprietary \
     libmulawdec \
     libqtigef \
-    libssrec \
     libvppclient \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
