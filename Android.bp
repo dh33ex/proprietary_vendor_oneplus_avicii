@@ -380,7 +380,6 @@ cc_prebuilt_library_shared {
                 "libqmi_cci",
                 "libbtnv",
                 "android.hardware.bluetooth@1.0",
-                "libsoc_helper",
                 "libc++",
                 "libc",
                 "libm",
@@ -3780,6 +3779,46 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.primary.lito",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/hw/audio.primary.lito.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "liblog",
+                "libcutils",
+                "libtinyalsa",
+                "libtinycompress",
+                "libaudioroute",
+                "libaudioutils",
+                "libexpat",
+                "libhidlbase",
+                "libprocessgroup",
+                "libutils",
+                "libaudio_log_utils",
+                "libaudioEngineerTest",
+                "android.hardware.power@1.2",
+                "vendor.oplus.hardware.performance@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    relative_install_path: "hw",
     prefer: true,
     soc_specific: true,
 }
@@ -13859,7 +13898,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libgps.utils",
-                "libizat_core",
                 "libasn1cper",
                 "libasn1crt",
                 "libasn1crtx",
